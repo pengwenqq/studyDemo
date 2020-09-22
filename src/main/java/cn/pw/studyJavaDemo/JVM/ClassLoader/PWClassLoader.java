@@ -1,6 +1,6 @@
 package cn.pw.studyJavaDemo.JVM.ClassLoader;
 
-import cn.pw.studyJavaDemo.Hello;
+import cn.pw.studyJavaDemo.JVM.Hello;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -32,8 +32,8 @@ public class PWClassLoader extends ClassLoader{
 
     public static void main(String[] args) throws Exception {
         ClassLoader l = new PWClassLoader();
-        Class clazz = l.loadClass("cn.pw.studyJavaDemo.Hello");
-        Class clazz1 = l.loadClass("cn.pw.studyJavaDemo.Hello");
+        Class clazz = l.loadClass("cn.pw.studyJavaDemo.JVM.Hello");
+        Class clazz1 = l.loadClass("cn.pw.studyJavaDemo.JVM.Hello");
 
         System.out.println(clazz == clazz1);
 

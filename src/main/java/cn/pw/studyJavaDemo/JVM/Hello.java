@@ -1,4 +1,4 @@
-package cn.pw.studyJavaDemo;
+package cn.pw.studyJavaDemo.JVM;
 
 public class Hello {
     public void m() {

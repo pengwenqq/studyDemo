@@ -1,7 +1,7 @@
-package cn.pw.lrupw.controller;
+package cn.pw.studyJavaDemo.LRU.controller;
 
 
-import cn.pw.lrupw.client.LRUCacheClient;
+import cn.pw.studyJavaDemo.LRU.client.LRUCacheClient;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

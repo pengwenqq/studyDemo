@@ -1,4 +1,4 @@
-package cn.pw.lrupw.entity;
+package cn.pw.studyJavaDemo.LRU.entity;
 
 import lombok.Data;
 import lombok.ToString;

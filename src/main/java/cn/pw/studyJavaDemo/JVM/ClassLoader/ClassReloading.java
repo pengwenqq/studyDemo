@@ -32,10 +32,10 @@ public class ClassReloading {
 
     public static void main(String[] args) throws Exception {
         MyLoader m = new MyLoader();
-        Class clazz = m.loadClass("cn.pw.studyJavaDemo.Hello");
+        Class clazz = m.loadClass("cn.pw.studyJavaDemo.JVM.Hello");
 
         m = new MyLoader();
-        Class clazzNew = m.loadClass("cn.pw.studyJavaDemo.Hello");
+        Class clazzNew = m.loadClass("cn.pw.studyJavaDemo.JVM.Hello");
 
         System.out.println(clazz == clazzNew);
     }
