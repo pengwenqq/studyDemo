@@ -21,25 +21,22 @@ public class SeckillController {
     StockDao stockDao;
 
     private static final Integer STOCK_ID = 1;
-    static ZKLock zkLock =  new ZKLock("139.224.119.73:2181,139.224.119.73:2182,139.224.119.73:2183,139.224.119.73:2184","/lockPath");
+    private static ZKLock zkLock =  new ZKLock("139.224.119.73:2181,139.224.119.73:2182,139.224.119.73:2183,139.224.119.73:2184","/lockPath");
 
     /**
      * 模拟秒杀的并发场景
      * @return true/false
      * @desc
-     * 步骤：
-     *      1.zk加分布式锁
-     *      2.Redis获取库存
-     *      3.判断库存是否小于0
-     *      4.小于0，返回“商品已售完”,
-     *      5.大于0，Redis库存减1，入数据库,返回"恭喜抢到商品",
-     *      6.zk解分布式锁
      */
     @RequestMapping(value = "seckKill",method = RequestMethod.GET)
     public String seckKill(){
         try {
             //1.加锁
             zkLock.lock();
+            //debug锁重入
+            /*zkLock.lock();*/
+//            zkLock.unlock();
+//            zkLock.unlock();
             //2.查询库存
             Stock stock = stockDao.getOne(STOCK_ID);
             //3.判断库存
